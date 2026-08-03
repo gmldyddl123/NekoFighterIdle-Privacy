@@ -52,6 +52,29 @@
     }
     p { margin: 0; }
     .intro { color: var(--muted); }
+    .legal-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+      padding: 12px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+    .legal-nav a {
+      padding: 7px 11px;
+      color: var(--accent);
+      border-radius: 8px;
+      font-weight: 650;
+      text-decoration: none;
+    }
+    .legal-nav a:hover,
+    .legal-nav a:focus-visible,
+    .legal-nav a[aria-current="page"] {
+      background: var(--accent-soft);
+      text-decoration: underline;
+    }
     .music-list {
       display: grid;
       gap: 14px;
@@ -109,6 +132,13 @@
 </head>
 <body>
   <main>
+    <nav class="legal-nav" aria-label="법적 고지">
+      <a href="./">개인정보 처리방침</a>
+      <a href="terms.html">이용약관</a>
+      <a href="copyright.html" aria-current="page">저작권 및 라이선스</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfN6uTSZF8rpNtqdFiNNiAoPmC08HmLjRTKdlp6t_hN7SJreA/viewform" target="_blank" rel="noopener noreferrer">계정 탈퇴 신청</a>
+    </nav>
+
     <header>
       <h1>음악 저작권 및 라이선스</h1>
       <p class="intro">냥투가 키우기에서 사용 중인 제3자 음악의 저작권 및 Creative Commons 라이선스 표기입니다.</p>
@@ -159,7 +189,7 @@
 
     <footer>
       <p>© 2026 TailWindsStudio. 제3자 음악의 권리는 각 제작자에게 있습니다.</p>
-      <p><a href="./">개인정보처리방침으로 돌아가기</a></p>
+      <p><a href="./">개인정보 처리방침</a> · <a href="terms.html">이용약관</a></p>
     </footer>
   </main>
 </body>

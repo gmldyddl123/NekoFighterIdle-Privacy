@@ -84,6 +84,31 @@
       text-underline-offset: 3px;
     }
 
+    .legal-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 28px;
+      padding: 12px;
+      background: #f8f9fc;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    .legal-nav a {
+      padding: 7px 11px;
+      border-radius: 8px;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .legal-nav a:hover,
+    .legal-nav a:focus-visible,
+    .legal-nav a[aria-current="page"] {
+      background: var(--accent-soft);
+      text-decoration: underline;
+    }
+
     .summary {
       margin: 24px 0 0;
       padding: 20px;
@@ -168,6 +193,13 @@
 </head>
 <body>
   <main>
+    <nav class="legal-nav" aria-label="법적 고지">
+      <a href="./" aria-current="page">개인정보 처리방침</a>
+      <a href="terms.html">이용약관</a>
+      <a href="copyright.html">저작권 및 라이선스</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfN6uTSZF8rpNtqdFiNNiAoPmC08HmLjRTKdlp6t_hN7SJreA/viewform" target="_blank" rel="noopener noreferrer">계정 탈퇴 신청</a>
+    </nav>
+
     <header>
       <p class="meta">TailWindsStudio</p>
       <h1>냥투가 키우기 개인정보처리방침</h1>
@@ -433,9 +465,8 @@
     <footer>
       <p>© 2026 TailWindsStudio. All rights reserved.</p>
       <p>본 문서는 「냥투가 키우기」 서비스의 실제 기능과 확인된 외부 서비스 구성을 기준으로 작성되었습니다.</p>
-      <p><a href="copyright.html">음악 저작권 및 라이선스</a></p>
-  </footer>
+      <p><a href="terms.html">이용약관</a> · <a href="copyright.html">저작권 및 라이선스</a></p>
+    </footer>
   </main>
-
-
-</body><div id="codex-browser-sidebar-comments-root" style="position: fixed; inset: 0px; pointer-events: none; z-index: 2147483647;"></div></html>
+</body>
+</html>
