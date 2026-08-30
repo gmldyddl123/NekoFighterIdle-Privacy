@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy"
-        content="default-src 'none'; script-src 'sha256-1G7TjjvzCg2AjLtkjZCWlBZPELZNO5ttHFXVhSH8xYw='; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; object-src 'none'">
+        content="default-src 'none'; script-src 'sha256-KPBuVrIFlPpXDz8FwNC2MxQoZyyumX+xJEWa20BYLpA='; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; object-src 'none'">
   <title>냥투가키우기 공식 카페</title>
   <style>
     :root {
@@ -79,8 +79,9 @@
     "S.browser_fallback_url=" + encodeURIComponent(webUrl) + ";end";
   const appLink = document.getElementById("app-link");
   const userAgent = navigator.userAgent || "";
-  const isAndroid = /Android/i.test(userAgent);
-  const isIOS = /iPhone|iPad|iPod/i.test(userAgent);
+  const isIOS =
+    /iPhone|iPad|iPod/i.test(userAgent) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
   let fallbackTimer = 0;
 
   const cancelFallback = () => {
@@ -103,11 +104,6 @@
   });
   window.addEventListener("pagehide", cancelFallback);
 
-  if (isAndroid) {
-    appLink.href = androidIntentUrl;
-    return;
-  }
-
   if (isIOS) {
     appLink.href = appUrl;
     appLink.addEventListener("click", () => {
@@ -117,8 +113,7 @@
     return;
   }
 
-  appLink.href = webUrl;
-  appLink.textContent = "웹으로 열기";
+  appLink.href = androidIntentUrl;
 })();</script>
 </body>
 </html>
