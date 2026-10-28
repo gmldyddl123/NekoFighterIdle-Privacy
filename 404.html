@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'none'; script-src 'sha256-MeEyA7rcTrhmq8D0xAdCTc2bTQ6p0MU8LFRlmOIMbtY='; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <title>페이지를 찾을 수 없습니다</title>
+  <script>
+    var path = window.location.pathname;
+    var trimmed = path.replace(/(\s|%20)+$/i, "");
+    if (trimmed !== path) {
+      window.location.replace(trimmed + window.location.search + window.location.hash);
+    }
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    body {
+      display: grid;
+      min-height: 100vh;
+      margin: 0;
+      place-items: center;
+      background: #f6f7f9;
+      color: #202124;
+      text-align: center;
+    }
+    main {
+      width: min(24rem, calc(100% - 3rem));
+      padding: 2rem 0;
+    }
+    a {
+      color: #1a73e8;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>페이지를 찾을 수 없습니다</h1>
+    <p><a href="/NekoFighterIdle-Privacy/terms.html">이용약관</a> · <a href="/NekoFighterIdle-Privacy/">개인정보처리방침</a></p>
+  </main>
+</body>
+</html>
